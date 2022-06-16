@@ -9,7 +9,7 @@ var velocity = Vector2()
 var speed = 120
 var health:int = 100
 # Called when the node enters the scene tree for the first time.
-onready var enemy = $Sprite
+onready var enemy = $AnimatedSprite
 onready var player = get_parent().get_node("Player")
 func _ready():
 	pass # Replace with function body.
@@ -18,6 +18,7 @@ func _physics_process(delta):
 	var direction = get_direction(enemy,player)
 	var move_direction = direction.normalized()
 	velocity = move_direction*speed
+	enemy.play('fly')
 	move_and_slide(velocity)
 	
 
