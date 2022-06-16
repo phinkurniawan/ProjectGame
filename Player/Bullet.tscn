@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.75771
 
-[node name="Bullet" type="RigidBody2D"]
+[node name="Bullet" type="RigidBody2D" groups=["bullet_dmg"]]
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 1 )
